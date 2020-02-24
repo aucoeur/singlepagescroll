@@ -1,0 +1,45 @@
+body {
+    font-family: 'Roboto';
+    font-size: 1.2em;
+    color: rgb(45, 45, 45);
+    background: linear-gradient(rgb(185,214,209), rgb(69, 168, 210),rgb(14, 89, 147), rgb(1, 43, 85), rgb(0,0,0));
+    background-attachment:fixed;
+    min-height: 100%;
+    text-align:center;
+    vertical-align: baseline;
+    line-height: 1;
+}
+
+#progress {
+	height:2%;
+	background:#444;
+	bottom:0;
+	z-index:200;
+}
+
+#bg1, #bg2, #bg3 {
+	z-index:50;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:url('../img/bubbles.png') repeat 0 0;
+	opacity: 0.3;
+}
+
+#bg2 {
+	z-index:49;
+	background-image:url('../img/bubbles2.png');
+	opacity: 0.2;
+}
+
+#bg3 {
+	z-index:48;
+	background-image:url('../img/bubbles3.png');
+	opacity: 0.4;
+}
+
+.skrollr-body {
+	text-align:center;
+	border-radius:1em;
+}
