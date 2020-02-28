@@ -110,6 +110,12 @@ h2 {
     margin: 0;
 }
 
+h2#long{
+    font-size: 3em;
+    letter-spacing: 0.6rem;
+    margin: 0;
+}
+
 h3 {
     font-size: 2em;
     letter-spacing: 1.3rem;
@@ -145,12 +151,13 @@ h3 {
     position: fixed;
     bottom: 30%;
     left: 45%;
-    z-index: 99;
+    z-index: 2;
 }
 
 .meter {
     display: flex;
     flex-direction: row;
+    padding: 0;
 }
 
 .line {
@@ -159,4 +166,24 @@ h3 {
     height: 100vh;
     width: 50%;
     z-index: 3;
+}
+
+.other {
+    position: sticky;
+    border-left: 5px dotted white;
+    height: 100vh;
+    width: 50%;
+    z-index: 3;
+}
+
+.blank {
+    width: 50%;
+    border: 0;
+}
+.title {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: rgb(255, 255, 255);
+    padding: 0.8rem;
+    text-align: center;
 }
