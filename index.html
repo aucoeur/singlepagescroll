@@ -13,15 +13,28 @@
 
 <body>
     <div class="container">
-        <div id="x" class="x"></div>
-        <div id="a" class="a">
-            <h1 data-aos="fade-up">Intro</h1>
+        <div id="a" class="a ">
+            <!-- <h1 data-aos="fade-up">Intro</h1> -->
+            <div class="inner">
+                <section id="header" class="orange header">
+                    <h1>DEEP</h1>
+                    <h2>DEEPER</h2>
+                    <h3>DEEPEST</h3>
+                </section>
+                <section id="intro" class="orange-muted header" data-aos="fade-down" data-aos-anchor="#header"
+                    data-aos-anchor-placement="bottom top">
+                    The ocean is divided into five main zones. These zones extend from the surface to the most extreme
+                    depths where light can no longer penetrate. The deep zones are where some of the most bizarre and
+                    fascinating creatures in the sea can be found.
+                </section>
+            </div>
+
         </div>
         <div id="b" class="b parallax">
             <h1 data-aos="fade-down">Ingredients</h1>
         </div>
         <div id="c" class="c">
-            <h1 data-aos="fade-right">Prep</h1>
+            <h1 data-aos="slide-right">Prep</h1>
         </div>
         <div id="d" class="d parallax">
             <h1 data-aos="fade-left">Cook</h1>
@@ -31,28 +44,25 @@
         </div>
     </div>
 
-
-    <div class="nav-bar">
-        <div class="line">
-            <a href="#a" class="">Intro</a>
-            <a href="#b" class="">Ingredients</a>
-            <a href="#c" class="">Prep</a>
-            <a href="#d" class="">Cook</a>
-            <a href="#e" class="">Enjoy</a>
-        </div>
+    <div id="sub" data-aos="fade-down-left"  data-aos-anchor="#b" data-aos-anchor-placement="bottom top">
+        <img src="assets/img/sub.png" alt="a submarine">
     </div>
 
+    <button id="toTop" title="Go to top"><i class="fas fa-chevron-up"></i></button>
 
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/37ff4a1043.js" crossorigin="anonymous"></script>
     <!-- Animate On Scroll -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- Waypoints -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
 
     <script type="text/javascript" src="assets/js/script.js"></script>
 
     <script>
         // Initialize Animate On Scroll
-        AOS.init();
+        AOS.init({
+            duration: 1200,
+            easing: 'ease-in'
+        });
     </script>
 </body>
 

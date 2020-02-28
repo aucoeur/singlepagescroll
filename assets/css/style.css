@@ -4,8 +4,8 @@ html {
 
 body {
     font-family: 'Exo 2';
-    font-size: 1.2em;
-    /* background: linear-gradient(rgb(185,214,209), rgb(69, 168, 210),rgb(14, 89, 147), rgb(1, 43, 85), rgb(0,0,0)); */
+    font-size: 1em;
+    color: white;
     height: 100vh;
     margin: 0;
 }
@@ -16,29 +16,6 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.nav-bar {
-    position: fixed;
-    left: 5px;
-    top: 10%;
-    border-left: 2px solid white;
-    /* transform: translate(0, -50%); */
-}
-
-.nav-bar>a {
-    display: block;
-    text-decoration: none;
-    padding: 1em;
-    background-color: rgba(255, 255, 255, 0.5);
-    color: #000;
-}
-
-.line {
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.5);
-    margin-left: 5px;
 }
 
 a {
@@ -57,48 +34,111 @@ a.selected {
     height: 100%;
 }
 
-.container>div:not(.x) {
+.container>div {
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.x {
-    /* background-color: cadetblue; */
-    background-color: rgb(185,214,209);
-    height: 1%;
 }
 
 .a {
     /* background-color: cadetblue; */
-    background: linear-gradient(rgb(185,214,209), rgb(69, 168, 210),rgb(14, 89, 147), rgb(1, 43, 85), rgb(0,0,0));
-    height:99%;
+    background: linear-gradient(rgba(184, 241, 242, 0.742), rgb(95, 183, 233), rgb(60, 183, 235));
+    display: flex;
+    flex-direction: column;
 }
 
 .b {
     /* background-color: cornflowerblue; */
-    background: linear-gradient( rgb(0,0,0), rgb(1, 43, 85),rgb(7, 80, 136), rgb(69, 168, 210), rgb(185,214,209));
-    /* background-image: url("images/grass-1.jpg"); */
+    background: linear-gradient(rgb(60, 183, 235), rgb(69, 168, 210), rgb(38, 140, 218));
 }
 
 .c {
     /* background-color: darkseagreen; */
-    background: linear-gradient(rgb(185,214,209), rgb(69, 168, 210),rgb(14, 89, 147), rgb(1, 43, 85), rgb(0,0,0));
+    background: linear-gradient(rgb(38, 140, 218), rgb(14, 89, 147), rgb(1, 43, 85), rgb(0, 0, 0));
 }
 
 .d {
     /* background-color: goldenrod; */
-    background: linear-gradient( rgb(0,0,0), rgb(1, 43, 85),rgb(7, 80, 136), rgb(69, 168, 210), rgb(185,214,209));
+    background: linear-gradient(rgb(0, 0, 0), rgb(1, 43, 85), rgb(7, 80, 136), rgb(69, 168, 210), rgb(185, 214, 209));
     /* background-image: url("images/grass-2.jpg"); */
 }
 
 .e {
-    background: linear-gradient(rgb(185,214,209), rgb(69, 168, 210),rgb(14, 89, 147), rgb(1, 43, 85), rgb(0,0,0));
+    background: linear-gradient(rgb(185, 214, 209), rgb(69, 168, 210), rgb(14, 89, 147), rgb(1, 43, 85), rgb(0, 0, 0));
+}
+
+#toTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: orangered;
+    color: white;
+    cursor: pointer;
+    padding: 7px 10px;
+    border-radius: 4px;
+}
+
+#toTop:hover {
+    background-color: rgba(255, 69, 0, 0.7);
+}
+
+.orange {
+    background-color: rgb(255, 60, 0);
+}
+
+.orange-muted {
+    background-color: rgba(181, 48, 0, 0.9);
 }
 
 h1 {
-    padding: 2em;
-    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 5.5em;
+    letter-spacing: 1rem;
+    margin: 0;
 }
 
+h2 {
+    font-size: 3em;
+    letter-spacing: 1rem;
+    margin: 0;
+}
+
+h3 {
+    font-size: 2em;
+    letter-spacing: 1.3rem;
+    line-height: 2em;
+    margin: 0;
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    max-width: 325px;
+    margin-left: 20px;
+
+}
+
+.header {
+    left: 1em;
+    padding: 2.2rem;
+}
+
+#header {
+    z-index: 1;
+}
+
+#intro {
+    font-size: 1.2rem;
+    line-height: 1.35em;
+    z-index: 0;
+}
+
+#sub {
+    display: block;
+    position: fixed;
+    bottom: 30%;
+    left: 50%;
+    z-index: 99;
+}

@@ -1,0 +1,104 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Exo 2';
+    font-size: 1.2em;
+    /* background: linear-gradient(rgb(185,214,209), rgb(69, 168, 210),rgb(14, 89, 147), rgb(1, 43, 85), rgb(0,0,0)); */
+    height: 100vh;
+    margin: 0;
+}
+
+.parallax {
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nav-bar {
+    position: fixed;
+    left: 5px;
+    top: 10%;
+    border-left: 2px solid white;
+    /* transform: translate(0, -50%); */
+}
+
+.nav-bar>a {
+    display: block;
+    text-decoration: none;
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #000;
+}
+
+.line {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-left: 5px;
+}
+
+a {
+    color: black;
+    padding: 0 5px;
+    margin: 0;
+    text-decoration: none;
+}
+
+a.selected {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: rgb(255, 255, 255);
+}
+
+.container {
+    height: 100%;
+}
+
+.container>div:not(.x) {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.x {
+    /* background-color: cadetblue; */
+    background-color: rgb(185,214,209);
+    height: 1%;
+}
+
+.a {
+    /* background-color: cadetblue; */
+    background: linear-gradient(rgb(185,214,209), rgb(69, 168, 210),rgb(14, 89, 147), rgb(1, 43, 85), rgb(0,0,0));
+    height:99%;
+}
+
+.b {
+    /* background-color: cornflowerblue; */
+    background: linear-gradient( rgb(0,0,0), rgb(1, 43, 85),rgb(7, 80, 136), rgb(69, 168, 210), rgb(185,214,209));
+    /* background-image: url("images/grass-1.jpg"); */
+}
+
+.c {
+    /* background-color: darkseagreen; */
+    background: linear-gradient(rgb(185,214,209), rgb(69, 168, 210),rgb(14, 89, 147), rgb(1, 43, 85), rgb(0,0,0));
+}
+
+.d {
+    /* background-color: goldenrod; */
+    background: linear-gradient( rgb(0,0,0), rgb(1, 43, 85),rgb(7, 80, 136), rgb(69, 168, 210), rgb(185,214,209));
+    /* background-image: url("images/grass-2.jpg"); */
+}
+
+.e {
+    background: linear-gradient(rgb(185,214,209), rgb(69, 168, 210),rgb(14, 89, 147), rgb(1, 43, 85), rgb(0,0,0));
+}
+
+h1 {
+    padding: 2em;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+

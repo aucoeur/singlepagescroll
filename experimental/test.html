@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" class="skrollr skrollr-desktop">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	<link href="assets/css/fixed-positioning.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/css_test.css">
+	<title>Story Scroller</title>
+</head>
+
+<body>
+	<!-- <ul>
+		<li><a href="#a">1</a></li>
+		<li><a href="#b">2</a></li>
+		<li><a href="#c">3</a></li>
+		<li><a href="#d">4</a></li>
+		<li><a href="#e">5</a></li>
+	</ul> -->
+
+	<div class="nav-bar">
+		<div class="line">
+			<a href="#a" class="">Intro</a>
+			<a href="#b" class="">Ingredients</a>
+			<a href="#c" class="">Prep</a>
+			<a href="#d" class="">Cook</a>
+			<a href="#e" class="">Enjoy</a>
+		</div>
+	</div>
+
+	<div id="a" class="section"></div>
+	<div id="b" class="section"></div>
+	<div id="c" class="section"></div>
+	<div id="d" class="section"></div>
+	<div id="e" class="section"></div>
+
+	<div class="container">
+		<div id="x" class="section x"></div>
+		<div id="a" class="section a selected">
+			<h1 data-aos="fade-up">Intro</h1>
+		</div>
+		<div id="b" class="section b parallax">
+			<h1 data-aos="fade-down">Ingredients</h1>
+		</div>
+		<div id="c" class="section c ">
+			<h1 data-aos="fade-right">Prep</h1>
+		</div>
+		<div id="d" class="section d parallax">
+			<h1 data-aos="fade-left">Cook</h1>
+		</div>
+		<div id="e" class="section e">
+			<h1 data-aos="fade-up">Enjoy</h1>
+		</div>
+	</div>
+
+
+	<!-- jQuery -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<!-- Animate On Scroll -->
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<!-- Waypoints -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.2/waypoints.min.js"></script>
+
+	<script src="assets/js/script_test.js"></script>
+	<script>
+		// Initialize Animate On Scroll
+		AOS.init();
+	</script>
+
+</body>
+
+</html>
