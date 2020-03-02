@@ -133,6 +133,11 @@
         </div>
     </div>
 
+<!-- skrollr bubbles bg -->
+	<div id="bg1" data-0="background-position:0px 0px;" data-end="background-position:0px -1000px;"></div>
+	<div id="bg2" data-0="background-position:0px 0px;" data-end="background-position:-500px -8000px;"></div>
+	<div id="bg3" data-0="background-position:0px 0px;" data-end="background-position:-500px -15000px;"></div>
+
     <div id="sub" data-aos="fade-down-left" data-aos-anchor="#b" data-aos-anchor-placement="bottom top">
         <img src="assets/img/sub.png" alt="a submarine">
     </div>
@@ -146,6 +151,8 @@
     <!-- Animate On Scroll -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+
+	<script type="text/javascript" src="experimental/assets/js/skrollr.min.js"></script>
     <script type="text/javascript" src="assets/js/script.js"></script>
 
     <script>
@@ -154,6 +161,8 @@
             duration: 1200,
             easing: 'ease-in'
         });
+
+        const s = skrollr.init();
     </script>
 </body>
 
