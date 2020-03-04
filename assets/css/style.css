@@ -267,6 +267,16 @@ h3 {
     overflow: hidden;
 }
 
+.fish {
+    display: flex;
+    bottom: 30%;
+    left: 30%;
+    z-index: 0;
+    opacity: 60%;
+    overflow: hidden;
+    padding-left: 10%;
+}
+
 .title {
     background-color: rgba(94, 94, 94, 0.3);
     color: rgb(255, 255, 255);
