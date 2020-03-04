@@ -148,6 +148,7 @@ h3 {
     animation: animation 1000ms linear infinite both;
     color: orangered;
     text-align: center;
+    padding-top: 20px;
 }
 
 @-webkit-keyframes animation {
@@ -245,11 +246,21 @@ h3 {
 }
 
 #sub {
-    display: block;
+    display: absolute;
     position: fixed;
     bottom: 25%;
     left: 48%;
     z-index: 0;
+    opacity: 60%;
+}
+
+#diver {
+    display: absolute;
+    position: fixed;
+    bottom: 25%;
+    left: 48%;
+    z-index: 0;
+    opacity: 60%;
 }
 
 .title {
@@ -352,7 +363,7 @@ h3 {
 .content {
   margin-top: 30px;
   padding: 20px 30px;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.646);
   position: relative;
   border-radius: 6px;
 }
@@ -388,4 +399,30 @@ h3 {
   .right {
     left: 0%;
   }
+}
+
+/* .parallax {
+    Create the parallax scrolling effect
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+.fade {
+  visibility: hidden;
+  opacity: 0;
+  transition-property: visibility, opacity;
+  transition-timing-function: linear;
+  transition-duration: 0s, .3s;
+  transition-delay: .3s, 0s;
+}
+
+.fade.is-shown {
+  visibility: visible;
+  opacity: 1;
+  transition-property: visibility, opacity;
+  transition-timing-function: linear;
+  transition-duration: 0s, .3s;
+  transition-delay: .3s, 0s;
 }
