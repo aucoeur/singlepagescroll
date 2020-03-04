@@ -15,6 +15,8 @@ function scrollFunction() {
     buttonTop.style.display = "block";
   } else {
     buttonTop.style.display = "none";
+    sub.classList.remove('is-shown')
+    diver.classList.add('is-shown')
   }
 }
 
@@ -34,7 +36,5 @@ function showSub() {
     // diver.style.display= "none";
     diver.classList.add('fade');
     diver.classList.remove('is-shown')
-  } else {
-    // sub.style.display = "none";
-  }
+  } 
 }
