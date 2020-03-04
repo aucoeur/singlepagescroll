@@ -6,11 +6,12 @@
 body {
     margin: 0;
     font-family: 'Exo 2', sans-serif;
+
 }
 
 .a {
     background: linear-gradient(rgba(195, 246, 255, 0.742), rgb(95, 183, 233), rgb(60, 183, 235));
-    height: 95vh;
+    height: 100vh;
 }
 
 .b {
@@ -47,6 +48,7 @@ body {
     cursor: pointer;
     padding: 7px 10px;
     border-radius: 4px;
+    
 }
 
 #toTop:hover {
@@ -130,7 +132,7 @@ h3 {
 }
 
 .introLeft {
-    align-self: stretch;
+    align-self: center;
 }
 .introRight {
     align-self: center;
@@ -252,15 +254,17 @@ h3 {
     left: 48%;
     z-index: 0;
     opacity: 60%;
+    overflow: hidden;
 }
 
 #diver {
     display: absolute;
     position: fixed;
-    bottom: 25%;
+    bottom: 35%;
     left: 48%;
     z-index: 0;
     opacity: 60%;
+    overflow: hidden;
 }
 
 .title {
@@ -276,7 +280,7 @@ h3 {
 .depth {
   position: relative;
   margin: 0 auto;
-  height: 100vh;
+  height: 70vh;
 }
 
 /* Actual dotted line */
@@ -298,7 +302,7 @@ h3 {
   background-color: inherit;
   width: 50%;
   z-index: 10;
-  margin: 20px;
+  margin: 0 20px 20px 20px;
 }
 
 /* Meter marks on the line */
@@ -310,12 +314,13 @@ h3 {
   position: absolute;
   width: 50px;
   height: 25px;
-  right: -16px;
+  right: 0px;
   color: rgb(255, 255, 255);
   background-color: rgba(85, 95, 116);
   top: 0px;
   z-index: 1;
-  padding: 0px 4px;
+  padding: 0 4px;
+  margin: 10px 0;
 }
 
 /* Containers on left/right */
@@ -324,7 +329,7 @@ h3 {
 }
 
 .right {
-  left: 47%;
+  left: 50%;
 }
 
 /* Arrows for left side (pointing right) */
@@ -360,12 +365,27 @@ h3 {
   left: -15px;
 }
 
+.left::after {
+    right: 22px;
+}
+
 .content {
   margin-top: 30px;
   padding: 20px 30px;
   background-color: rgba(255, 255, 255, 0.646);
   position: relative;
   border-radius: 6px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
@@ -425,4 +445,8 @@ h3 {
   transition-timing-function: linear;
   transition-duration: 0s, .3s;
   transition-delay: .3s, 0s;
+}
+
+.bmargin {
+    margin-bottom: 100px;
 }
