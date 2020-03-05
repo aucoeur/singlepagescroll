@@ -6,7 +6,7 @@
 body {
     margin: 0;
     font-family: 'Exo 2', sans-serif;
-
+    /* height: 100vh; */
 }
 
 .a {
@@ -262,19 +262,24 @@ h3 {
     position: fixed;
     bottom: 35%;
     left: 48%;
-    z-index: 0;
+    z-index: -1;
     opacity: 60%;
     overflow: hidden;
 }
 
 .fish {
-    display: flex;
-    bottom: 30%;
     left: 30%;
     z-index: 0;
-    opacity: 60%;
-    overflow: hidden;
+    opacity: 40%;
     padding-left: 10%;
+}
+
+#squid {
+    position: absolute;
+    margin-top: 10%;
+    opacity: 80%;
+    z-index: -10;
+    left: 10%;
 }
 
 .title {
@@ -290,7 +295,7 @@ h3 {
 .depth {
   position: relative;
   margin: 0 auto;
-  height: 70vh;
+  height: 90vh;
 }
 
 /* Actual dotted line */
@@ -459,4 +464,8 @@ h3 {
 
 .bmargin {
     margin-bottom: 100px;
+}
+
+.tmargin {
+    margin-top: 15%;
 }
