@@ -1,22 +1,24 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /* Set a background color */
 body {
     margin: 0;
     font-family: 'Exo 2', sans-serif;
-    /* height: 100vh; */
+    height: 100vh;
+}
+
+body>div:not(#sub):not(#diver) {
+    height:100vh;
 }
 
 .a {
     background: linear-gradient(rgba(195, 246, 255, 0.742), rgb(95, 183, 233), rgb(60, 183, 235));
-    height: 100vh;
 }
 
 .b {
     background: linear-gradient(rgb(60, 183, 235), rgb(69, 168, 210), rgb(38, 140, 218));
-    height: 80vh;
 }
 
 .c {
@@ -49,7 +51,7 @@ body {
     cursor: pointer;
     padding: 7px 10px;
     border-radius: 4px;
-    
+
 }
 
 #toTop:hover {
@@ -135,6 +137,7 @@ h3 {
 .introLeft {
     align-self: center;
 }
+
 .introRight {
     align-self: center;
     flex-grow: 1;
@@ -249,7 +252,7 @@ h3 {
 }
 
 #sub {
-    display: absolute;
+    display: block;
     position: fixed;
     bottom: 25%;
     left: 48%;
@@ -259,7 +262,7 @@ h3 {
 }
 
 #diver {
-    display: absolute;
+    display: block;
     position: fixed;
     bottom: 35%;
     left: 48%;
@@ -269,7 +272,8 @@ h3 {
 }
 
 .fish {
-    left: 30%;
+    position: absolute;
+    right: 50%;
     z-index: 0;
     opacity: 40%;
     padding-left: 10%;
@@ -302,91 +306,91 @@ h3 {
 
 /* Dotted line container */
 .depth {
-  position: relative;
-  margin: 0 auto;
-  height: 90vh;
+    position: relative;
+    margin: 0 auto;
+    height: 90vh;
 }
 
 /* Actual dotted line */
 .depth::after {
-  content: '';
-  position: absolute;
-  width: 2px;
-  border-right: 6px dotted white;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -3px;
+    content: '';
+    position: absolute;
+    width: 2px;
+    border-right: 6px dotted white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
 }
 
 /* Container around content */
 .container {
-  padding: 10px 40px;
-  position: relative;
-  background-color: inherit;
-  width: 50%;
-  z-index: 10;
-  margin: 0 20px 20px 20px;
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    z-index: 10;
+    margin: 0 20px 20px 20px;
 }
 
 /* Meter marks on the line */
 .container::after {
-  content: attr(data-depth);
-  text-align: center;
-  line-height: 25px;
-  vertical-align: middle;
-  position: absolute;
-  width: 50px;
-  height: 25px;
-  right: 0px;
-  color: rgb(255, 255, 255);
-  background-color: rgba(85, 95, 116);
-  top: 0px;
-  z-index: 1;
-  padding: 0 4px;
-  margin: 10px 0;
+    content: attr(data-depth);
+    text-align: center;
+    line-height: 25px;
+    vertical-align: middle;
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    right: 0px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(85, 95, 116);
+    top: 0px;
+    z-index: 1;
+    padding: 0 4px;
+    margin: 10px 0;
 }
 
 /* Containers on left/right */
 .left {
-  left: 0;
+    left: 0;
 }
 
 .right {
-  left: 50%;
+    left: 50%;
 }
 
 /* Arrows for left side (pointing right) */
 .left::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 50px;
-  width: 0;
-  z-index: 10;
-  right: 30px;
-  border: medium solid rgba(255, 255, 255, 0.6);
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent rgba(255, 255, 255, 0.6);
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 50px;
+    width: 0;
+    z-index: 10;
+    right: 30px;
+    border: medium solid rgba(255, 255, 255, 0.6);
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent rgba(255, 255, 255, 0.6);
 }
 
 /* Arrows for right side (pointing left) */
 .right::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 50px;
-  width: 0;
-  z-index: 10;
-  left: 30px;
-  border: medium solid rgba(255, 255, 255, 0.6);
-  border-width: 10px 10px 10px 0;
-  border-color: transparent rgba(255, 255, 255, 0.6) transparent transparent;
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 50px;
+    width: 0;
+    z-index: 10;
+    left: 30px;
+    border: medium solid rgba(255, 255, 255, 0.6);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent rgba(255, 255, 255, 0.6) transparent transparent;
 }
 
 /* Tweak meter marks to be center */
 .right::after {
-  left: -15px;
+    left: -15px;
 }
 
 .left::after {
@@ -394,11 +398,11 @@ h3 {
 }
 
 .content {
-  margin-top: 30px;
-  padding: 20px 30px;
-  background-color: rgba(255, 255, 255, 0.646);
-  position: relative;
-  border-radius: 6px;
+    margin-top: 30px;
+    padding: 20px 30px;
+    background-color: rgba(255, 255, 255, 0.646);
+    position: relative;
+    border-radius: 6px;
 }
 
 .row {
@@ -414,39 +418,62 @@ h3 {
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
-/* Depth meter to left */
-  .depth::after {
-    left: 31px;
-  }
 
-/* Full-width containers */
-  .container {
-    width: 100%;
-    padding-left: 30px;
-    padding-right: 25px;
-  }
+    /* Depth meter to left */
+    .depth::after {
+        left: 31px;
+    }
 
-/* Arrows all point left */
-  .container::before {
-    left: 20px;
-    border: medium solid rgba(255, 255, 255, 0.6);
-    border-width: 10px 10px 10px 0;
-    border-color: transparent rgba(255, 255, 255, 0.6) transparent transparent;
-  }
+    /* Full-width containers */
+    .container {
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 25px;
+    }
 
-/* Align all marks to left */
-  .left::after, .right::after {
-    left: -15px;
-  }
+    /* Arrows all point left */
+    .container::before {
+        left: 20px;
+        border: medium solid rgba(255, 255, 255, 0.6);
+        border-width: 10px 10px 10px 0;
+        border-color: transparent rgba(255, 255, 255, 0.6) transparent transparent;
+    }
 
-/* Align all containers */
-  .right {
-    left: 0%;
-  }
+    /* Align all marks to left */
+    .left::after,
+    .right::after {
+        left: -15px;
+    }
 
-  img {
-    max-width: 100%;
-}
+    /* Align all containers */
+    .right {
+        left: 0%;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    #intro {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .introRight {
+        padding-top: 30px;
+        align-self: center;
+        flex-grow: 1;
+    }
+
+    #diver {
+        display: block;
+        position: fixed;
+        bottom: 5%;
+        left: 48%;
+        z-index: 0;
+        opacity: 60%;
+        overflow: hidden;
+    }
 }
 
 /* .parallax {
@@ -458,21 +485,23 @@ h3 {
 } */
 
 .fade {
-  visibility: hidden;
-  opacity: 0;
-  transition-property: visibility, opacity;
+    visibility: hidden;
+    opacity: 0;
+    /* transition-property: visibility, opacity;
   transition-timing-function: linear;
-  transition-duration: 0s, .3s;
-  transition-delay: .3s, 0s;
+  transition-duration: 1s, 3s;
+  transition-delay: .5s, 0s; */
+    transition: height 350ms ease-in-out, opacity 750ms ease-in-out;
 }
 
 .fade.is-shown {
-  visibility: visible;
-  opacity: 1;
-  transition-property: visibility, opacity;
+    visibility: visible;
+    opacity: 1;
+    /* transition-property: visibility, opacity;
   transition-timing-function: linear;
-  transition-duration: 0s, .3s;
-  transition-delay: .3s, 0s;
+  transition-duration: 1s, 3s;
+  transition-delay: .5s, 0s; */
+    transition: height 350ms ease-in-out, opacity 750ms ease-in-out;
 }
 
 .bmargin {
@@ -484,5 +513,5 @@ h3 {
 }
 
 .tmargin {
-    margin-top: 20%;
+    margin-top: 10%;
 }
