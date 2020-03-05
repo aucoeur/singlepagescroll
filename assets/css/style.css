@@ -16,6 +16,7 @@ body {
 
 .b {
     background: linear-gradient(rgb(60, 183, 235), rgb(69, 168, 210), rgb(38, 140, 218));
+    height: 80vh;
 }
 
 .c {
@@ -262,7 +263,7 @@ h3 {
     position: fixed;
     bottom: 35%;
     left: 48%;
-    z-index: -1;
+    z-index: 0;
     opacity: 60%;
     overflow: hidden;
 }
@@ -434,6 +435,10 @@ h3 {
   .right {
     left: 0%;
   }
+
+  img {
+    max-width: 100%;
+}
 }
 
 /* .parallax {
@@ -464,6 +469,10 @@ h3 {
 
 .bmargin {
     margin-bottom: 100px;
+}
+
+.bmargin2 {
+    margin-bottom: 300px;
 }
 
 .tmargin {
