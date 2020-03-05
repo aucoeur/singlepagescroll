@@ -451,6 +451,15 @@ h3 {
     }
 
     img {
+        max-width: 100%;;
+    }
+
+    #squid {
+        position: absolute;
+        margin-top: 10%;
+        opacity: 80%;
+        z-index: -10;
+        left: 10%;
         max-width: 100%;
     }
 
